@@ -1,29 +1,33 @@
-<p>
-    <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-        <mat-label>Age</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Company</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  
+<!--OJO: Si es que utilizo "form" para contener a todos los mat-form-fields debo utilizar la sintaxis
+    de [formGroup] como manda Angular forms" -->
+<form [formGroup]="formPrincipal">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="name" type="text">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="age">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="email">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Company</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="company">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" (click)="enviar(formPrincipal.value)">Enviar</button>
+</form>

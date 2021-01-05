@@ -25,4 +25,9 @@ export class FormComponent implements OnInit {
 
   }
 
+  enviar(datos:any){
+    console.log(datos);
+
+  }
+
 }
