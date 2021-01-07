@@ -5,10 +5,26 @@
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Fill out your name</ng-template>
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        <mat-form-field class="mr-5">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="firstCtrl" required>
         </mat-form-field>
+        <mat-form-field class="mr-5">
+            <mat-label>Apellido</mat-label>
+            <input matInput placeholder="Apellido" required>
+          </mat-form-field>
+          <mat-form-field class="mr-5">
+            <mat-label>Edad</mat-label>
+            <input matInput placeholder="Last name, First name" required>
+          </mat-form-field>
+          <mat-form-field class="mr-5">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput placeholder="Last name, First name" required>
+          </mat-form-field>
+          <mat-form-field class="mr-5">
+            <mat-label>Empresa</mat-label>
+            <input matInput placeholder="Last name, First name" required>
+          </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>
