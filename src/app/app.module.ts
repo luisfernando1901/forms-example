@@ -11,12 +11,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+import { StepperComponent } from './components/stepper/stepper.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatSelectModule,
     MatChipsModule,
     MatButtonModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
